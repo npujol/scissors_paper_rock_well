@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from scissors_paper_rock_well.models import Input, Output
-from scissors_paper_rock_well.core import play
+from .models import Input, Output
+from .core import play
 
 app = FastAPI(
     title="scissors_paper_rock_well",
