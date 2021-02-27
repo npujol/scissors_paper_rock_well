@@ -2,7 +2,8 @@ from enum import Enum
 from pydantic import BaseModel
 
 # The possible throw values (scissors, paper, rock, well)
-class Throw(Enum):
+# Inherit from srt, so that the fastapi documentation shows the Enum values.
+class Throw(str, Enum):
     SCISSORS = "scissors"
     ROCK = "rock"
     PAPER = "paper"
@@ -10,7 +11,8 @@ class Throw(Enum):
 
 
 # The possible result values (win, loss, draw)
-class Result(Enum):
+# Inherit from srt, so that the fastapi documentation shows the Enum values.
+class Result(str, Enum):
     WIN = "win"
     LOSS = "loss"
     DRAW = "draw"
