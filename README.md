@@ -1,12 +1,12 @@
 # scissors_paper_rock_well
 
-A version of the game scissor-paper-rock, but now including a new word **well**.
+A version of the game scissor-paper-rock, but now including a new throw **well**.
 
 ## Install
 
 ### Requirements
 
-1.[Docker](https://www.docker.com/) installed in your system.
+- [Docker](https://www.docker.com/) installed in your system.
 
 ### Steps to install the service
 
@@ -29,13 +29,13 @@ The steps to run the tests are the followings:
 Step 1: Build the local image
 
 ```shell
-docker build . -t local_app
+docker build . -t scissors_paper_rock_well
 ```
 
 Step 2: Run the tests \[Optional\]
 
 ```shell
-docker run app python -m pytest --cov=scissors_paper_rock_well
+docker run scissors_paper_rock_well python -m pytest --cov=scissors_paper_rock_well
 ```
 
 ## Development
@@ -43,6 +43,7 @@ docker run app python -m pytest --cov=scissors_paper_rock_well
 The steps to development are the followings:
 
 Step 1: Create the virtual environment
+
 Step 2: Install poetry
 
 ```shell
@@ -63,13 +64,13 @@ The steps to use the service in production are the followings:
 Step 1: Build the image for production, removing the development dependencies
 
 ```shell
-docker build . -t production_app --build-arg CURRENT_ENV=production
+docker build . -t scissors_paper_rock_well --build-arg CURRENT_ENV=production
 ```
 
 Step 2: Run the service
 
 ```shell
-docker run -d -p 8000:8000 production_app
+docker run -d -p 8000:8000 scissors_paper_rock_well
 ```
 
 You can visit http://localhost:8000/ to see the API documentation
@@ -107,6 +108,6 @@ Step 3: Run the docker image
 
 ```shell
 
-docker --context myappcontext run -p 80:80 production_app
+docker --context myappcontext run -p 80:80 scissors_paper_rock_well
 
 ```
