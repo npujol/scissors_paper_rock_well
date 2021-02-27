@@ -20,4 +20,4 @@ RUN poetry config virtualenvs.create false \
 
 COPY ./ /code/
 
-CMD uvicorn scissors_paper_rock_well.api:app 
+CMD gunicorn -w 4 -k uvicorn.workers.UvicornH11Worker scissors_paper_rock_well.api:app -b 0.0.0.0:8000
