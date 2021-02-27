@@ -35,7 +35,7 @@ docker build . -t local_app
 Step 2: Run the tests \[Optional\]
 
 ```shell
-docker run app python -m pytest --verbose
+docker run app python -m pytest --cov=scissors_paper_rock_well
 ```
 
 ## Development
