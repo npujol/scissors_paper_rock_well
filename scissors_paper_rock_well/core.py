@@ -31,7 +31,7 @@ def match(a: Throw, b: Throw) -> Result:
 
 # Get a random throw (the computer's throw) using the values of Throw
 def random_throw() -> Throw:
-    return choice([v for v in Throw])
+    return choice(list(Throw))
 
 
 # Given the user's throw, the function get the computer's throw

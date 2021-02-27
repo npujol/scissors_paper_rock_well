@@ -1,0 +1,4 @@
+.direnv
+.hypothesis
+.pytest_cache
+.envrc
