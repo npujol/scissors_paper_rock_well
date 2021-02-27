@@ -20,4 +20,4 @@ RUN poetry config virtualenvs.create false \
 
 COPY ./ /code/
 
-CMD uvicorn scissors_paper_rock_well.api:app 
+CMD uvicorn scissors_paper_rock_well.api:app --host 0.0.0.0
